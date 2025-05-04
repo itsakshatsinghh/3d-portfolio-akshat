@@ -1,7 +1,10 @@
+import { div } from "three/tsl";
+
+
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
+    name: "Projects",
+    link: "#Projects",
   },
   {
     name: "Experience",
@@ -12,28 +15,31 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Download Resume",
+    link: "/Akshat-CV.pdf", 
+    download: true,          
   },
 ];
 
+
 const words = [
   { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Automation", imgPath: "/images/automation.png" },
+  { text: "AI Models", imgPath: "/images/deep-learning.png" },
+  { text: "Web Development", imgPath: "/images/coding.png" },
+  { text: "Frontend Development", imgPath: "/images/front.png" },
+  { text: "Full-Stack Development", imgPath: "/images/fs.png" },
+  { text: "Backend Systems", imgPath: "/images/computer.png" },
+  { text: "Machine Learning", imgPath: "/images/deep-learningg.png" } 
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { label: "Dedicated Student of Software Engineering", showValue: false },
+  { label: "Continuously Developing Skills", showValue: false },
+  { value: 8, suffix: "+", label: "8 Personal Projects", showValue: true },
+  { label: "Committed to Delivering Quality Work", showValue: false },
 ];
+
 
 const logoIconsList = [
   {
@@ -74,18 +80,18 @@ const logoIconsList = [
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    title: " Leadership",
+    desc: "Driving successful outcomes through effective team management and collaboration.",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Strong Communication",
+    desc: "Ensuring clear and effective communication with clients and team members.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Strategic Outreach",
+    desc: "Building and maintaining relationships with clients and stakeholders.",
   },
 ];
 
@@ -107,7 +113,7 @@ const techStackImgs = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
+    name: "Git & Github",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -132,13 +138,13 @@ const techStackIcons = [
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
+    name: "Data Structure & Algorithms",
+    modelPath: "/models/dsa.glb",
+    scale: 2.5,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "Git & Github",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
@@ -147,41 +153,45 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    review:
+      "Akshat's dedication, passion, and hard work have been instrumental in making our club a thriving community for AI enthusiasts.",
+    imgPath: "/images/logo1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "PR and Outreach",
+    date: "November 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Spearheaded strategic outreach campaigns, increasing AIC's visibility across academic and tech communities.",
+      "Built and maintained media relations, securing coverage in key platforms to amplify organizational impact.",
+      "Led public relations initiatives, fostering partnerships and boosting engagement with stakeholders and startups.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review:
+      "Akshat has been the backbone of our backend, integrating complex systems with precision through smart automation. His reliability has been invaluable to the team. \n ---- Sejal Mishra [Lead of the USDC]",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "Backend Developer",
+    date: "January 2025 - Present",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Built web scraping pipelines with BeautifulSoup to extract and structure content from external sources.",
+      "Designed and managed Supabase database schemas for storing and retrieving real-time data efficiently.",
+      "Ensured secure and scalable API architecture to support seamless frontend interactions and future growth.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review:
+    "Akshat's best work comes out when you are in real pressure situations , he is a true all-rounder- dilevers when matters \n ---- HCCA",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Fast Bowling All-Rounder (but make it Code)",
+    date: "September 2024 - Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Bowled blazing-fast scrapers using BeautifulSoup — extracting data with pace and precision.",
+      "Balanced attack and defense by structuring a solid Supabase backend for reliable data handling.",
+      "Delivered full-stack yorkers with secure, scalable APIs — clean dismissals for any frontend challenge.",
     ],
-  },
+  }
+  
 ];
 
 const expLogos = [
@@ -201,66 +211,71 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Tony Stark",
+    mentions: "@ironman3000",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "Akshat built our site faster than I built the Mark I in a cave. Clean, functional, and stylish — just like my suits. 10/10 would deploy again.",
     imgPath: "/images/client1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Cam Green",
+    mentions: "@Camgr",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "When I'm not smashing sixes, I'm smashing that refresh button on our revamped website. Akshat made it so slick, it's like the web dev version of a cover drive. Absolute all-rounder.",
     imgPath: "/images/client3.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Wade Wilson",
+    mentions: "@deadpool",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Akshat’s so good, I didn’t even break the fourth wall to fix bugs. Dead serious. He codes like a ninja and debugs like a wizard. Hire him before I do.",
     imgPath: "/images/client2.png",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Marvel",
+    mentions: "@stanlee",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "Excelsior! Akshat took our old-school site and gave it a superhero origin story. Now it’s faster, cooler, and has a story arc I’m proud of. Web-tastic work!",
     imgPath: "/images/client5.png",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Miles Morales",
+    mentions: "@Imspideypt2",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "My site used to be stuck in the Spider-Verse. Akshat pulled it into the multiverse of mobile-friendly greatness. Web dev wizard. Straight-up hero.",
     imgPath: "/images/client4.png",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "Albert Einstein",
+    mentions: "@thegreatmind",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "Akshat’s work proves E=MC²: Excellent = (Modern Code × Clean Design)². Logic, elegance, and a touch of genius. Highly relative to perfection.",
     imgPath: "/images/client6.png",
   },
 ];
 
+
 const socialImgs = [
+    {
+      name: "insta",
+      href: "https://www.instagram.com/itsakshatsinghh",
+      imgPath: "/images/insta.png",
+      alt: "Instagram"
+    },
+  
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "linkedin",
+    href: "https://www.linkedin.com/in/itsakshatsinghh/",
+    imgPath: "/images/linkedin.png",
+    alt: "LinkedIn"
   },
   {
     name: "x",
+    url: "https://www.x.com/",
+    href:"https://github.com/itsakshatsinghh",
     imgPath: "/images/x.png",
   },
-  {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
-  },
+
 ];
 
 export {
@@ -276,3 +291,4 @@ export {
   techStackImgs,
   navLinks,
 };
+export default div;

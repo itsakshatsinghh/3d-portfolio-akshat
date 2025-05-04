@@ -26,19 +26,25 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
-          Adrian JSM
+          Akshat ⚡️
         </a>
 
         <nav className="desktop">
           <ul>
-            {navLinks.map(({ link, name }) => (
-              <li key={name} className="group">
-                <a href={link}>
-                  <span>{name}</span>
-                  <span className="underline" />
-                </a>
-              </li>
-            ))}
+          {navLinks.map(({ link, name, download }) => (
+  <li key={name} className="group">
+    <a
+      href={link}
+      {...(download
+        ? { download: true, target: "_blank", rel: "noopener noreferrer" }
+        : {})}
+    >
+      <span>{name}</span>
+      <span className="underline" />
+    </a>
+  </li>
+))}
+
           </ul>
         </nav>
 

@@ -36,10 +36,7 @@ const Experience = () => {
       });
     });
 
-    // Animate the timeline height as the user scrolls
-    // from the top of the timeline to 70% down the screen
-    // The timeline height should scale down from 1 to 0
-    // as the user scrolls up the screen
+
     gsap.to(".timeline", {
       // Set the origin of the animation to the bottom of the timeline
       transformOrigin: "bottom bottom",
@@ -62,31 +59,27 @@ const Experience = () => {
       },
     });
 
-    // Loop through each expText element and animate them in
-    // as the user scrolls to each text element
+
     gsap.utils.toArray(".expText").forEach((text) => {
-      // Animate the text opacity from 0 to 1
-      // and move it from the left to its final position
-      // over 1 second with a power2 ease-in-out curve
+     
       gsap.from(text, {
-        // Set the opacity of the text to 0
+        
         opacity: 0,
-        // Move the text from the left to its final position
-        // (xPercent: 0 means the text is at its final position)
+        
         xPercent: 0,
-        // Animate over 1 second
+        
         duration: 1,
-        // Use a power2 ease-in-out curve
+        
         ease: "power2.inOut",
-        // Trigger the animation when the text is 60% down the screen
+        
         scrollTrigger: {
-          // The text is the trigger element
+          
           trigger: text,
-          // Trigger the animation when the text is 60% down the screen
+          
           start: "top 60%",
         },
       });
-    }, "<"); // position parameter - insert at the start of the animation
+    }, "<"); 
   }, []);
 
   return (
@@ -97,7 +90,7 @@ const Experience = () => {
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
           title="Professional Work Experience"
-          sub="💼 My Career Overview"
+          sub=" 💼 मेरे करियर का विवरण"
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
