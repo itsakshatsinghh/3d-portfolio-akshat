@@ -11,7 +11,7 @@ const Hero = () => {
     gsap.fromTo(
       ".hero-text h1",
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+      { y: 0, opacity: 1, stagger: 0.09, duration: 1, ease: "power2.inOut" }
     );
   });
 
@@ -23,42 +23,38 @@ const Hero = () => {
 
       <div className="hero-layout">
         {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-4.1">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Creating
+                Hey !
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
                       <span
                         key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
+                        className="flex items-center md:gap-2.6 gap-1 pb-1"
                       >
-                        <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                        />
+                        
                         <span>{word.text}</span>
                       </span>
                     ))}
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Shows Results</h1>
+              <h1>to My Website</h1>
+              {/* <h1>that Gives Results</h1> */}
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hii, I’m Akshat, a student in VIT Bhopal. I’m a
-              passionate developer with a knack for creating innovative
-              solutions.
-            </p>
+              I’m <strong>Akshat</strong>, a student in <strong>VIT Bhopal</strong>. I’m a
+              passionate developer with a knack for creating <strong>innovative solutions</strong>.
+             </p>
+
 
             <Button
-              text="What I do for living "
-              className="md:w-80 md:h-16 w-60 h-12"
+              text="What do I do ?  "
+              className="md:w-80 md:h-16 w-58 h-12"
               id="counter"
             />
           </div>

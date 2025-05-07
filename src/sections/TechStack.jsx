@@ -26,7 +26,7 @@ const TechStack = () => {
         opacity: 1, // Set the opacity to 1
         duration: 1, // Duration of the animation
         ease: "power2.inOut", // Ease of the animation
-        stagger: 0.2, // Stagger the animation by 0.2 seconds
+        stagger: 0.1, // Stagger the animation by 0.2 seconds
         scrollTrigger: {
           trigger: "#skills", // Trigger the animation when the user scrolls to the #skills wrapper
           start: "top center", // Start the animation when the top of the wrapper is at the center of the screen
@@ -39,8 +39,8 @@ const TechStack = () => {
     <div id="skills" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="My Key Skills"
-          sub="🤝 What I Bring to the Table(after chai :)"
+          title="Key Skills"
+          sub="What I Bring to the Table(after chai :)"
         />
         <div className="tech-grid">
          
@@ -49,12 +49,10 @@ const TechStack = () => {
               key={techStackIcon.name}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
             >
-              {/* The tech-card-animated-bg div is used to create a background animation when the 
-                  component is hovered. */}
+              
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
-                {/* The tech-icon-wrapper div contains the TechIconCardExperience component, 
-                    which renders the 3D model of the tech stack icon. */}
+              
                 <div className="tech-icon-wrapper">
                   <TechIconCardExperience model={techStackIcon} />
                 </div>

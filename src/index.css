@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@40");
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -9,7 +15,8 @@ html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: black;
+  background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 49%, rgba(26, 25, 25, 1) 75%, rgba(20, 19, 19, 1) 89%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 1) 100%);
   color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
@@ -85,12 +92,18 @@ section {
   }
 
   .hero-text {
+    
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
     img {
       @apply size-8 md:size-10 object-contain;
     }
     .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      font-family: "Dancing Script", cursive;
+      font-weight: 600;
+      color: #B6F2FF;
+
+      
+      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[38px] md:h-[70px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
   }
 
@@ -103,6 +116,7 @@ section {
   }
 
   .navbar {
+   font-family: 'Pixelify Sans', sans-serif;
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
     &.scrolled {
@@ -114,6 +128,7 @@ section {
     }
 
     .inner {
+      font-family: 'Pixelify Sans', sans-serif;
       @apply mx-auto flex items-center justify-between;
     }
 
@@ -155,6 +170,7 @@ section {
   }
 
   .app-showcase {
+    font-family: "Jura", sans-serif;
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
     .showcaselayout {
@@ -203,6 +219,7 @@ section {
   }
 
   .cta-wrapper {
+    
     @apply relative z-20 cursor-pointer;
   }
 
@@ -216,6 +233,7 @@ section {
     }
 
     .text {
+      
       @apply uppercase md:text-lg text-black transition-all duration-500
         group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
@@ -230,9 +248,10 @@ section {
     }
   }
 
-  .card-border {
+  /* .card-border {
+    font-family: "Tagesschrift", system-ui;
     @apply border border-black-50 bg-black-100;
-  }
+  } */
 
   .marquee-item {
     @apply md:w-40 w-32;
@@ -245,12 +264,16 @@ section {
   .timeline {
     @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
   }
-
+  .card-border {
+    font-family: "Pixelify Sans", sans-serif;
+    @apply border border-black-50 bg-black-100;
+  }
   .timeline-logo {
     @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
   }
 
   .exp-card-wrapper {
+    font-family: "Roboto Condensed", sans-serif;
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
   }
 
@@ -266,6 +289,7 @@ section {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
+      font-family: "Roboto Condensed", sans-serif;
       @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
     }
   }
@@ -280,15 +304,18 @@ section {
 
   form {
     label {
+      font-family: "Roboto Condensed", sans-serif;
       @apply block text-white-50 mb-2;
     }
 
     input,
     textarea {
+      font-family: "Roboto Condensed", sans-serif;
       @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
     }
 
     a {
+      font-family: "Roboto Condensed", sans-serif;
       @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
 
       img {
@@ -298,6 +325,7 @@ section {
   }
 
   .footer {
+    font-family: "Roboto Condensed", sans-serif;
     @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
 
     .footer-container {
@@ -305,6 +333,7 @@ section {
     }
 
     p {
+      font-family: "Roboto Condensed", sans-serif;
       @apply text-center md:text-start cursor-pointer;
     }
 
@@ -327,6 +356,7 @@ section {
   display: inline-block;
   flex-direction: column;
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -365,15 +395,17 @@ section {
 /* Hero Text slider ends */
 
 .gradient-line {
-  width: 2px;
+  width: px;
   background: linear-gradient(
     0deg,
     rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
+    #efd704 25%,
     #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
+    #039e7a 62.83%,
+    #ab5607 92.91%
+    /* #02577b 92.91% */
   );
+  scroll-behavior: smooth;
 }
 
 .gradient-edge:nth-of-type(1) {

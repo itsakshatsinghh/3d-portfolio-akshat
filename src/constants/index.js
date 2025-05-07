@@ -23,21 +23,23 @@ const navLinks = [
 
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Automation", imgPath: "/images/automation.png" },
-  { text: "AI Models", imgPath: "/images/deep-learning.png" },
-  { text: "Web Development", imgPath: "/images/coding.png" },
-  { text: "Frontend Development", imgPath: "/images/front.png" },
-  { text: "Full-Stack Development", imgPath: "/images/fs.png" },
-  { text: "Backend Systems", imgPath: "/images/computer.png" },
-  { text: "Machine Learning", imgPath: "/images/deep-learningg.png" } 
+  { text: "Welcome" },         
+  { text: "स्वागत है" },          
+  { text: "ਸਵਾਗਤ ਹੈ" },        
+  { text: "ようこそ" },      
+  { text: "欢迎" },          
+  { text: "स्वागत आहे" },     
+  { text: "Willkommen" },    
+  { text: "Добро пожаловать" },
+  { text: "Bem-vindo" },       
+  { text: "Benvenuto" },            
 ];
 
 const counterItems = [
-  { label: "Dedicated Student of Software Engineering", showValue: false },
-  { label: "Continuously Developing Skills", showValue: false },
-  { value: 8, suffix: "+", label: "8 Personal Projects", showValue: true },
-  { label: "Committed to Delivering Quality Work", showValue: false },
+  { value: 2, suffix: "ⁿᵈ", label: "Year of CTRL+C, CTRL+V Mastery", showValue: true },
+  { value: 378, suffix: "+", label: "Late Nights of editing codes", showValue: false },
+  {value: 80324, suffix: "+",  label: "Lines of Code", showValue: false },
+  { value: 8, suffix: "+", label: "Personal Projects", showValue: true },
 ];
 
 
