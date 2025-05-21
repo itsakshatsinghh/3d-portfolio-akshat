@@ -260,7 +260,7 @@ const testimonials = [
 const socialImgs = [
     {
       name: "insta",
-      href: "https://www.instagram.com/itsakshatsinghh",
+      href: "https://www.instagram.com/irl.akshat",
       imgPath: "/images/insta.png",
       alt: "Instagram"
     },
